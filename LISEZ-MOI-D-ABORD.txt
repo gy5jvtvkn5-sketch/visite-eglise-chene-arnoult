@@ -1,0 +1,17 @@
+PAQUET COMPLET — VISITE AUDIO DE L'ÉGLISE DE CHÊNE-ARNOULT
+
+Ce dossier est prêt pour GitHub Pages.
+
+À envoyer à la RACINE du dépôt GitHub :
+- index.html
+- 404.html
+- les pages 01 à 32 en .html
+- le dossier assets
+- les MP3 1.mp3 à 14.mp3 puis 16.mp3 à 32.mp3
+- .nojekyll s'il est visible
+
+Le numéro 15 n'a volontairement pas de MP3.
+
+IMPORTANT :
+Ouvrez ce dossier et sélectionnez SON CONTENU pour l'envoyer sur GitHub.
+Ne déposez pas le dossier parent comme un dossier unique.
