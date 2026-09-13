@@ -1,4 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>02 — Litre funéraire</title><link href="assets/style.css" rel="stylesheet"/></head><body><div class="topbar"></div><main class="wrap"><a class="brand" href="index.html" style="text-decoration:none">Église de Chêne-Arnoult • Visite audio</a><p><span class="num">02</span></p><h1>Litre funéraire</h1><section class="card"><h2>🎧 Écouter le commentaire</h2><audio autoplay="" controls="" preload="auto"><source src="2.mp3" type="audio/mpeg"/></audio><p class="hint">Audio : 02.mp3</p></section><section class="text"><p>Elle a été apposée, comme c’était l’usage à l’époque pour les personnages qui bénéficiaient de ce « droit honorifique », à l’occasion des funérailles de Gaspard Robert Guérin , marquis de Bruslard, avant-dernier seigneur de Chêne-Arnoult, mort le 30 décembre 1761. Elle représente le blason de la famille de Bruslard, « d’or, à trois lions de sable (noir), armés (avec des griffes ), lampassés ( avec une langue ) et couronnés de gueule (rouge ) ». ce sont des armoiries « parlantes » car elles représentent des charbons ardents qui brûlent comme les Bruslard. Est aussi représenté le collier de l’Ordre de St Michel dont Robert était chevalier ainsi qu’une couronne de marquis.</p></section><nav><a class="btn secondary" href="01.html">← 01</a><a class="btn primary" href="03.html">03 →</a></nav><div class="footer">Étape 2 sur 32</div></main><script>
-document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("audio");if(a){var p=a.play();if(p&&typeof p.catch==="function"){p.catch(function(){});}}});
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>02 — Litre funéraire</title><link href="assets/style.css" rel="stylesheet"/></head><body><div class="topbar"></div><main class="wrap"><a class="brand" href="index.html" style="text-decoration:none">Église de Chêne-Arnoult • Visite audio</a><p><span class="num">02</span></p><h1>Litre funéraire</h1><section class="card"><h2>🎧 Écouter le commentaire</h2><button class="btn primary audio-start" type="button" style="width:100%;font-size:1.2rem;padding:16px;margin:8px 0 14px;cursor:pointer">▶ Écouter le commentaire</button><audio controls="" preload="auto"><source src="2.mp3" type="audio/mpeg"/></audio><p class="hint">Audio : 02.mp3</p></section><section class="text"><p>Elle a été apposée, comme c’était l’usage à l’époque pour les personnages qui bénéficiaient de ce « droit honorifique », à l’occasion des funérailles de Gaspard Robert Guérin , marquis de Bruslard, avant-dernier seigneur de Chêne-Arnoult, mort le 30 décembre 1761. Elle représente le blason de la famille de Bruslard, « d’or, à trois lions de sable (noir), armés (avec des griffes ), lampassés ( avec une langue ) et couronnés de gueule (rouge ) ». ce sont des armoiries « parlantes » car elles représentent des charbons ardents qui brûlent comme les Bruslard. Est aussi représenté le collier de l’Ordre de St Michel dont Robert était chevalier ainsi qu’une couronne de marquis.</p></section><nav><a class="btn secondary" href="01.html">← 01</a><a class="btn primary" href="03.html">03 →</a></nav><div class="footer">Étape 2 sur 32</div></main><script>
+document.addEventListener("DOMContentLoaded",function(){
+  var b=document.querySelector(".audio-start");
+  var a=document.querySelector("audio");
+  if(b&&a){
+    b.addEventListener("click",function(){
+      a.play();
+      b.textContent="⏸ Commentaire en cours";
+    });
+    a.addEventListener("pause",function(){
+      if(!a.ended){b.textContent="▶ Reprendre le commentaire";}
+    });
+    a.addEventListener("play",function(){b.textContent="⏸ Commentaire en cours";});
+    a.addEventListener("ended",function(){b.textContent="▶ Réécouter le commentaire";});
+  }
+});
 </script></body></html>

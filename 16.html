@@ -1,4 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>16 — Maître autel</title><link href="assets/style.css" rel="stylesheet"/></head><body><div class="topbar"></div><main class="wrap"><a class="brand" href="index.html" style="text-decoration:none">Église de Chêne-Arnoult • Visite audio</a><p><span class="num">16</span></p><h1>Maître autel</h1><section class="card"><h2>🎧 Écouter le commentaire</h2><audio autoplay="" controls="" preload="auto"><source src="16.mp3" type="audio/mpeg"/></audio><p class="hint">Audio : 16.mp3</p></section><section class="text"><p>Depuis le concile Vatican II cet autel n’est plus utilisé pour la célébration de l’eucharistie. L’office a été célébré de 1966 à 2025 sur une simple table tournée vers les fidèles et située au centre du chœur. En 2025, un véritable autel a été réalisé bénévolement par M. Patrick Lebeau, menuisier retraité à Chêne-Arnoult, avec du bois d’ormes ayant poussé à Chêne-Arnoult. Il a été consacré par Mgr Pascal Wintzer, archevêque de Sens et évêque d’Auxerre, le 7 décembre 2025 à l’occasion de la traditionnelle messe des 4 saints.</p></section><nav><a class="btn secondary" href="15.html">← 15</a><a class="btn primary" href="17.html">17 →</a></nav><div class="footer">Étape 16 sur 32</div></main><script>
-document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("audio");if(a){var p=a.play();if(p&&typeof p.catch==="function"){p.catch(function(){});}}});
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>16 — Maître autel</title><link href="assets/style.css" rel="stylesheet"/></head><body><div class="topbar"></div><main class="wrap"><a class="brand" href="index.html" style="text-decoration:none">Église de Chêne-Arnoult • Visite audio</a><p><span class="num">16</span></p><h1>Maître autel</h1><section class="card"><h2>🎧 Écouter le commentaire</h2><button class="btn primary audio-start" type="button" style="width:100%;font-size:1.2rem;padding:16px;margin:8px 0 14px;cursor:pointer">▶ Écouter le commentaire</button><audio controls="" preload="auto"><source src="16.mp3" type="audio/mpeg"/></audio><p class="hint">Audio : 16.mp3</p></section><section class="text"><p>Depuis le concile Vatican II cet autel n’est plus utilisé pour la célébration de l’eucharistie. L’office a été célébré de 1966 à 2025 sur une simple table tournée vers les fidèles et située au centre du chœur. En 2025, un véritable autel a été réalisé bénévolement par M. Patrick Lebeau, menuisier retraité à Chêne-Arnoult, avec du bois d’ormes ayant poussé à Chêne-Arnoult. Il a été consacré par Mgr Pascal Wintzer, archevêque de Sens et évêque d’Auxerre, le 7 décembre 2025 à l’occasion de la traditionnelle messe des 4 saints.</p></section><nav><a class="btn secondary" href="15.html">← 15</a><a class="btn primary" href="17.html">17 →</a></nav><div class="footer">Étape 16 sur 32</div></main><script>
+document.addEventListener("DOMContentLoaded",function(){
+  var b=document.querySelector(".audio-start");
+  var a=document.querySelector("audio");
+  if(b&&a){
+    b.addEventListener("click",function(){
+      a.play();
+      b.textContent="⏸ Commentaire en cours";
+    });
+    a.addEventListener("pause",function(){
+      if(!a.ended){b.textContent="▶ Reprendre le commentaire";}
+    });
+    a.addEventListener("play",function(){b.textContent="⏸ Commentaire en cours";});
+    a.addEventListener("ended",function(){b.textContent="▶ Réécouter le commentaire";});
+  }
+});
 </script></body></html>

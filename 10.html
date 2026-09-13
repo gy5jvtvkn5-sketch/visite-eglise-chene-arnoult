@@ -1,4 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>10 — Niche.</title><link href="assets/style.css" rel="stylesheet"/></head><body><div class="topbar"></div><main class="wrap"><a class="brand" href="index.html" style="text-decoration:none">Église de Chêne-Arnoult • Visite audio</a><p><span class="num">10</span></p><h1>Niche.</h1><section class="card"><h2>🎧 Écouter le commentaire</h2><audio autoplay="" controls="" preload="auto"><source src="10.mp3" type="audio/mpeg"/></audio><p class="hint">Audio : 10.mp3</p></section><section class="text"><p>L’église a été fermée au culte catholique exclusif de 1562 à 1594 et dédiée au culte protestant ( ou au simultaneum, usage des deux cultes dans la période d’accalmie de 1563 à 1567 ) à l’occasion de la conversion au protestantisme des seigneurs de Chêne-Arnoult, les Lefort. L’église a été à nouveau consacrée au culte catholique exclusif à partir de 1595.</p><p>Cette niche est apparue en 1966 par effondrement du muret qui la fermait et a laissé apparaître une petite statue en bois polychrome de la vierge Marie qui a disparu depuis lors. On peut imaginer que cette statue a été enfermée et cachée dans cette niche lorsque l’église a été convertie en temple protestant, le culte rendu à la vierge Marie n’étant pas pratiqué par les protestants.</p></section><nav><a class="btn secondary" href="09.html">← 09</a><a class="btn primary" href="11.html">11 →</a></nav><div class="footer">Étape 10 sur 32</div></main><script>
-document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("audio");if(a){var p=a.play();if(p&&typeof p.catch==="function"){p.catch(function(){});}}});
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>10 — Niche.</title><link href="assets/style.css" rel="stylesheet"/></head><body><div class="topbar"></div><main class="wrap"><a class="brand" href="index.html" style="text-decoration:none">Église de Chêne-Arnoult • Visite audio</a><p><span class="num">10</span></p><h1>Niche.</h1><section class="card"><h2>🎧 Écouter le commentaire</h2><button class="btn primary audio-start" type="button" style="width:100%;font-size:1.2rem;padding:16px;margin:8px 0 14px;cursor:pointer">▶ Écouter le commentaire</button><audio controls="" preload="auto"><source src="10.mp3" type="audio/mpeg"/></audio><p class="hint">Audio : 10.mp3</p></section><section class="text"><p>L’église a été fermée au culte catholique exclusif de 1562 à 1594 et dédiée au culte protestant ( ou au simultaneum, usage des deux cultes dans la période d’accalmie de 1563 à 1567 ) à l’occasion de la conversion au protestantisme des seigneurs de Chêne-Arnoult, les Lefort. L’église a été à nouveau consacrée au culte catholique exclusif à partir de 1595.</p><p>Cette niche est apparue en 1966 par effondrement du muret qui la fermait et a laissé apparaître une petite statue en bois polychrome de la vierge Marie qui a disparu depuis lors. On peut imaginer que cette statue a été enfermée et cachée dans cette niche lorsque l’église a été convertie en temple protestant, le culte rendu à la vierge Marie n’étant pas pratiqué par les protestants.</p></section><nav><a class="btn secondary" href="09.html">← 09</a><a class="btn primary" href="11.html">11 →</a></nav><div class="footer">Étape 10 sur 32</div></main><script>
+document.addEventListener("DOMContentLoaded",function(){
+  var b=document.querySelector(".audio-start");
+  var a=document.querySelector("audio");
+  if(b&&a){
+    b.addEventListener("click",function(){
+      a.play();
+      b.textContent="⏸ Commentaire en cours";
+    });
+    a.addEventListener("pause",function(){
+      if(!a.ended){b.textContent="▶ Reprendre le commentaire";}
+    });
+    a.addEventListener("play",function(){b.textContent="⏸ Commentaire en cours";});
+    a.addEventListener("ended",function(){b.textContent="▶ Réécouter le commentaire";});
+  }
+});
 </script></body></html>

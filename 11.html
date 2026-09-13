@@ -1,4 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>11 — Grille de chœur</title><link href="assets/style.css" rel="stylesheet"/></head><body><div class="topbar"></div><main class="wrap"><a class="brand" href="index.html" style="text-decoration:none">Église de Chêne-Arnoult • Visite audio</a><p><span class="num">11</span></p><h1>Grille de chœur</h1><section class="card"><h2>🎧 Écouter le commentaire</h2><audio autoplay="" controls="" preload="auto"><source src="11.mp3" type="audio/mpeg"/></audio><p class="hint">Audio : 11.mp3</p></section><section class="text"><p>Cette grille a été utilisée jusqu’en 1966 pour séparer le chœur de la nef et limiter l’accès au chœur aux personnes consacrées ou autorisées exceptionnellement à y pénétrer. C’est au pied de cette grille que les fidèles s’agenouillaient pour recevoir la communion.</p></section><nav><a class="btn secondary" href="10.html">← 10</a><a class="btn primary" href="12.html">12 →</a></nav><div class="footer">Étape 11 sur 32</div></main><script>
-document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("audio");if(a){var p=a.play();if(p&&typeof p.catch==="function"){p.catch(function(){});}}});
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>11 — Grille de chœur</title><link href="assets/style.css" rel="stylesheet"/></head><body><div class="topbar"></div><main class="wrap"><a class="brand" href="index.html" style="text-decoration:none">Église de Chêne-Arnoult • Visite audio</a><p><span class="num">11</span></p><h1>Grille de chœur</h1><section class="card"><h2>🎧 Écouter le commentaire</h2><button class="btn primary audio-start" type="button" style="width:100%;font-size:1.2rem;padding:16px;margin:8px 0 14px;cursor:pointer">▶ Écouter le commentaire</button><audio controls="" preload="auto"><source src="11.mp3" type="audio/mpeg"/></audio><p class="hint">Audio : 11.mp3</p></section><section class="text"><p>Cette grille a été utilisée jusqu’en 1966 pour séparer le chœur de la nef et limiter l’accès au chœur aux personnes consacrées ou autorisées exceptionnellement à y pénétrer. C’est au pied de cette grille que les fidèles s’agenouillaient pour recevoir la communion.</p></section><nav><a class="btn secondary" href="10.html">← 10</a><a class="btn primary" href="12.html">12 →</a></nav><div class="footer">Étape 11 sur 32</div></main><script>
+document.addEventListener("DOMContentLoaded",function(){
+  var b=document.querySelector(".audio-start");
+  var a=document.querySelector("audio");
+  if(b&&a){
+    b.addEventListener("click",function(){
+      a.play();
+      b.textContent="⏸ Commentaire en cours";
+    });
+    a.addEventListener("pause",function(){
+      if(!a.ended){b.textContent="▶ Reprendre le commentaire";}
+    });
+    a.addEventListener("play",function(){b.textContent="⏸ Commentaire en cours";});
+    a.addEventListener("ended",function(){b.textContent="▶ Réécouter le commentaire";});
+  }
+});
 </script></body></html>
